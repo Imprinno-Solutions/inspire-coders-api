@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InspireCoders.Application\InspireCoders.Application.csproj" />
+    <ProjectReference Include="..\InspireCoders.Infrastructure\InspireCoders.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

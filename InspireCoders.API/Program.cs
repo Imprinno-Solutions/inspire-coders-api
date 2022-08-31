@@ -1,8 +1,14 @@
+using InspireCoders.Application;
+using InspireCoders.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 var AllowInspireCodersClient = "_allowInspireCodersClient";
+
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices(builder.Configuration);
 
 builder.Services.AddCors(options =>
 {
