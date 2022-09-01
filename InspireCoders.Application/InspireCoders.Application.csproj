@@ -16,8 +16,4 @@
     <ProjectReference Include="..\InspireCoders.Domain\InspireCoders.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Products\Commands\" />
-  </ItemGroup>
-
 </Project>

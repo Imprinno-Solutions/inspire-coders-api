@@ -6,5 +6,6 @@ namespace InspireCoders.Application.Contracts.FakeDataStores
     {
         Task AddProduct(Product product);
         Task<IEnumerable<Product>> GetAllProducts();
+        Task<Product> GetProductById(int id);
     }
 }

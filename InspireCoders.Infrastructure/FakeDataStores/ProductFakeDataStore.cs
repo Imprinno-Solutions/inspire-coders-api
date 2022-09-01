@@ -19,10 +19,14 @@ namespace InspireCoders.Infrastructure.FakeDataStores
 
         public async Task AddProduct(Product product)
         {
+            //product.CreatedBy = "admin";
+            //product.LastModifiedBy = "admin";
             _products.Add(product);
             await Task.CompletedTask;
         }
 
         public async Task<IEnumerable<Product>> GetAllProducts() => await Task.FromResult(_products);
+
+        public async Task<Product> GetProductById(int id) => await Task.FromResult(_products.Single(p => p.Id == id));
     }
 }

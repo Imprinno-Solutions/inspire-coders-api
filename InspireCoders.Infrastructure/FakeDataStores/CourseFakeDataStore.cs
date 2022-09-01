@@ -23,5 +23,7 @@ namespace InspireCoders.Infrastructure.FakeDataStores
             await Task.CompletedTask;
         }
         public async Task<IEnumerable<Course>> GetAllCourses() => await Task.FromResult(_courses);
+
+        public async Task<Course> GetCourseById(int id) => await Task.FromResult(_courses.Single(p => p.Id == id));
     }
 }

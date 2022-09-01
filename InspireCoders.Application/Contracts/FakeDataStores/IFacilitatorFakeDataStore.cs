@@ -6,5 +6,6 @@ namespace InspireCoders.Application.Contracts.FakeDataStores
     {
         Task AddFacilitator(Facilitator facilitator);
         Task<IEnumerable<Facilitator>> GetAllFacilitators();
+        Task<Facilitator> GetFacilitatorById(int id);
     }
 }

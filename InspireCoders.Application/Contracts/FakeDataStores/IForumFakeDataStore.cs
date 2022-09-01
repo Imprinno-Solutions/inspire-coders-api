@@ -6,5 +6,6 @@ namespace InspireCoders.Application.Contracts.FakeDataStores
     {
         Task AddForum(Forum forum);
         Task<IEnumerable<Forum>> GetAllForums();
+        Task<Forum> GetForumById(int id);
     }
 }
