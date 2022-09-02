@@ -1,5 +1,6 @@
 ﻿using InspireCoders.Application.Features.Courses.Commands;
 using InspireCoders.Application.Features.Courses.Queries;
+using InspireCoders.Application.Features.Courses.ViewModels;
 using InspireCoders.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -28,9 +29,9 @@ namespace InspireCoders.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddCourse([FromBody] Course Course)
+        public async Task<ActionResult> AddCourse([FromBody] AddCourseVm AddCourseVm)
         {
-            var CourseToReturn = await _mediator.Send(new AddCourseCommand(Course));
+            var CourseToReturn = await _mediator.Send(new AddCourseCommand(AddCourseVm));
             return CreatedAtRoute("GetCourseById", new { id = CourseToReturn.Id }, CourseToReturn);
         }
 

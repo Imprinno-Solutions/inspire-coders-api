@@ -1,4 +1,5 @@
-﻿using InspireCoders.Application.Features.Facilitators.Commands;
+﻿using InspireCoders.Application.Features.Facilitators.ViewModels;
+using InspireCoders.Application.Features.Facilitators.Commands;
 using InspireCoders.Application.Features.Facilitators.Queries;
 using InspireCoders.Domain.Entities;
 using MediatR;
@@ -28,9 +29,9 @@ namespace InspireCoders.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddFacilitator([FromBody] Facilitator Facilitator)
+        public async Task<ActionResult> AddFacilitator([FromBody] AddFacilitatorVm AddFacilitatorVm)
         {
-            var FacilitatorToReturn = await _mediator.Send(new AddFacilitatorCommand(Facilitator));
+            var FacilitatorToReturn = await _mediator.Send(new AddFacilitatorCommand(AddFacilitatorVm));
             return CreatedAtRoute("GetFacilitatorById", new { id = FacilitatorToReturn.Id }, FacilitatorToReturn);
         }
 

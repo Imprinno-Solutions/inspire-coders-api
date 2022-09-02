@@ -7,5 +7,6 @@ namespace InspireCoders.Application.Contracts.FakeDataStores
         Task AddCourse(Course course);
         Task<IEnumerable<Course>> GetAllCourses();
         Task<Course> GetCourseById(int id);
+        Task<Course> GetCourseByCode(string code);
     }
 }

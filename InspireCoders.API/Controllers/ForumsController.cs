@@ -1,6 +1,6 @@
 ﻿using InspireCoders.Application.Features.Forums.Commands;
 using InspireCoders.Application.Features.Forums.Queries;
-using InspireCoders.Domain.Entities;
+using InspireCoders.Application.Features.Forums.ViewModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,9 +28,9 @@ namespace InspireCoders.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddForum([FromBody] Forum Forum)
+        public async Task<ActionResult> AddForum([FromBody] AddForumVm AddForumVm)
         {
-            var ForumToReturn = await _mediator.Send(new AddForumCommand(Forum));
+            var ForumToReturn = await _mediator.Send(new AddForumCommand(AddForumVm));
             return CreatedAtRoute("GetForumById", new { id = ForumToReturn.Id }, ForumToReturn);
         }
 

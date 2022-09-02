@@ -1,8 +1,6 @@
-﻿using InspireCoders.Domain.Common;
-
-namespace InspireCoders.Domain.Entities
+﻿namespace InspireCoders.Application.Features.Facilitators.ViewModels
 {
-    public class Facilitator : EntityBase
+    public class AddFacilitatorVm
     {
         public string Code { get; set; }
         public string FirstName { get; set; }
@@ -10,7 +8,6 @@ namespace InspireCoders.Domain.Entities
         public string Email { get; set; }
         public string Username { get; set; }
         public string CourseCode { get; set; }
-        public Course Course { get; set; }
         public string Phone { get; set; }
     }
 }
