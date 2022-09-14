@@ -136,6 +136,6 @@ namespace InspireCoders.Infrastructure.FakeDataStores
         }
         public async Task<IEnumerable<Forum>> GetAllForums() => await Task.FromResult(_forums);
 
-        public async Task<Forum> GetForumById(int id) => await Task.FromResult(_forums.Single(p => p.Id == id));
+        public async Task<Forum> GetForumById(int id) => await Task.FromResult(_forums.First(p => p.Id == id));
     }
 }

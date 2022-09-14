@@ -22,6 +22,7 @@ namespace InspireCoders.Infrastructure
             services.AddSingleton<ICourseFakeDataStore, CourseFakeDataStore>();
             services.AddSingleton<IFacilitatorFakeDataStore, FacilitatorFakeDataStore>();
             services.AddSingleton<IForumFakeDataStore, ForumFakeDataStore>();
+            services.AddSingleton<IUserFakeDataStore, UserFakeDataStore>();
 
             //services.Configure<EmailSettings>(c => configuration.GetSection("EmailSettings"));
             //services.AddTransient<IEmailService, EmailService>();

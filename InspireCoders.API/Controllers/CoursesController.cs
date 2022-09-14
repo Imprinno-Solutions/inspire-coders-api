@@ -1,7 +1,6 @@
 ﻿using InspireCoders.Application.Features.Courses.Commands;
 using InspireCoders.Application.Features.Courses.Queries;
 using InspireCoders.Application.Features.Courses.ViewModels;
-using InspireCoders.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

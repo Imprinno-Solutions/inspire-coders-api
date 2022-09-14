@@ -85,7 +85,7 @@ namespace InspireCoders.Infrastructure.FakeDataStores
         }
         public async Task<IEnumerable<Facilitator>> GetAllFacilitators() => await Task.FromResult(_facilitators);
 
-        public async Task<Facilitator> GetFacilitatorById(int id) => await Task.FromResult(_facilitators.Single(p => p.Id == id));
+        public async Task<Facilitator> GetFacilitatorById(int id) => await Task.FromResult(_facilitators.First(p => p.Id == id));
 
         public async Task<Facilitator> GetFacilitatorByCode(string code) => await Task.FromResult(_facilitators.Single(p => p.Code == code));
     }
